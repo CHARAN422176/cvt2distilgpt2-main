@@ -128,10 +128,11 @@ class CvT2DistilGPT2IUXRayChen(CvT2DistilGPT2MIMICXRChen):
         decoder.resize_token_embeddings(config.vocab_size + 2)
 
         # Decoder tokenizer:
-        self.tokenizer = transformers.GPT2TokenizerFast.from_pretrained(
-            os.path.join(self.ckpt_zoo_dir, ckpt_name),
-            local_files_only=True,
-        )
+        # self.tokenizer = transformers.GPT2TokenizerFast.from_pretrained(
+        #     os.path.join(self.ckpt_zoo_dir, ckpt_name),
+        #     local_files_only=True,
+        # )
+        self.tokenizer = transformers.GPT2TokenizerFast.from_pretrained("distilgpt2")
         self.tokenizer.add_special_tokens({"bos_token": "[BOS]", 'pad_token': '[PAD]'})
 
         # Print the special tokens:
