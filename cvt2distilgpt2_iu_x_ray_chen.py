@@ -106,10 +106,12 @@ class CvT2DistilGPT2IUXRayChen(CvT2DistilGPT2MIMICXRChen):
 
         # Decoder:
         ckpt_name = 'distilgpt2'
-        config = transformers.GPT2Config.from_pretrained(
-            os.path.join(self.ckpt_zoo_dir, ckpt_name),
-            local_files_only=True,
-        )
+        # config = transformers.GPT2Config.from_pretrained(
+        #     os.path.join(self.ckpt_zoo_dir, ckpt_name),
+        #     local_files_only=True,
+        # )
+        config = transformers.GPT2Config.from_pretrained("distilgpt2")
+
         config.add_cross_attention = True
         config.is_decoder = True
 
