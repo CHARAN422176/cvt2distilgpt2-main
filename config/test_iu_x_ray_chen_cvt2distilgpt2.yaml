@@ -1,5 +1,5 @@
 exp_dir: experiments
-dataset_dir: /kaggle/input/iu-xray/iu_xray
+dataset_dir: /kaggle/input/iu-xray
 ckpt_zoo_dir: checkpoints
 # venv_path: venv/bin/activate  # If using a SLURM cluster, uncomment this line.
 

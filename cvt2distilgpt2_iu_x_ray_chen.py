@@ -49,8 +49,8 @@ class CvT2DistilGPT2IUXRayChen(CvT2DistilGPT2MIMICXRChen):
         self.num_workers = num_workers
 
         # Paths:
-        self.labels_file_path = os.path.join(self.dataset_dir, "iu_x-ray_chen", "annotation.json")
-        self.dataset_dir = os.path.join(self.dataset_dir, "iu_x-ray_chen", "images")
+        self.labels_file_path = os.path.join(self.dataset_dir, "iu_x-ray", "annotation.json")
+        self.dataset_dir = os.path.join(self.dataset_dir, "iu_x-ray", "images")
         self.chen_tokenizer = TokenizerChen(
             ann_path=self.labels_file_path,
             threshold=3,
