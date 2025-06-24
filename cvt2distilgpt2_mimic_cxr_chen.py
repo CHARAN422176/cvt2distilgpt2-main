@@ -495,9 +495,9 @@ class CvT2DistilGPT2MIMICXRChen(LightningModule):
 
         scores = {}
 
-        output = self.test_chexbert_metrics.compute()
-        scores.update(output)
-        self.test_chexbert_metrics.reset()
+        # output = self.test_chexbert_metrics.compute()
+        # scores.update(output)
+        # self.test_chexbert_metrics.reset()
 
         output = self.test_coco_metrics.compute()
         scores.update(output)
